@@ -75,14 +75,12 @@ df['Age'].plot(kind='hist', bins=20)
 df['Age'].plot(kind='kde')
 ```
 
-📊 Datasets & Schema
+## 📊 Datasets & Schema
 
-```
-DatasetRecordsDescriptionPrimary KeyKey Featurestrain.csv891Historical passenger manifest and survival recordsPassengerIdSurvived, Pclass, Sex, Age, Fare, Embarkedtest.csv418Historical passenger manifest for testing model predictionsPassengerIdSurvived, Pclass, Sex, Age, Fare, Embarked
-
-
-
-```
+| Dataset | Records | Description | Primary Key | Key Features |
+| :--- | :---: | :--- | :--- | :--- |
+| **`train.csv`** | 891 | Historical passenger manifest and survival records | `PassengerId` | `Survived`, `Pclass`, `Sex`, `Age`, `Fare`, `Embarked` |
+| **`test.csv`** | 418 | Historical passenger manifest for testing model predictions | `PassengerId` | `Survived`, `Pclass`, `Sex`, `Age`, `Fare`, `Embarked` |
 
 
 💡 Key Insights Discovered
