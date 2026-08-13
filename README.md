@@ -13,3 +13,21 @@ Welcome! 👋 This repository contains a practical exploratory data analysis (ED
 └── README.md                            # Project documentation
 
 ```
+
+🛠️ How the Pipeline Works
+
+The workflow is organized into four sequential steps inside Titanic_Data_Analysis.ipynb:
+
+```
+┌───────────────────────────┐      ┌───────────────────────────┐
+│ 1. Data Assessment        │ ──> │ 2. Column Classification  │
+│ Check Records & Nulls     │      │ Numerical & Categorical   │
+└───────────────────────────┘      └───────────────────────────┘
+                                                 │
+                                                 ▼
+┌───────────────────────────┐      ┌───────────────────────────┐
+│ 4. Visual Analysis        │ <── │ 3. Summary Statistics     │
+│ Histograms & Density Plots│      │ Mean, Median & Skewness   │
+└───────────────────────────┘      └───────────────────────────┘
+
+```
