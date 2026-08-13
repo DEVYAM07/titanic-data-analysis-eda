@@ -50,3 +50,74 @@ numerical_cols = ['Age', 'Fare', 'PassengerId']
 categorical_cols = ['Survived', 'Pclass', 'Sex', 'SibSp', 'Parch', 'Embarked']
 mixed_cols = ['Name', 'Ticket', 'Cabin']
 ```
+
+3️⃣ Summary Statistics
+
+->Calculates summary statistics (mean, median, standard deviation, quartiles) for continuous columns.
+
+->Measures distribution shape and skewness for passenger age.
+
+```
+# Descriptive statistics and skewness calculation for age
+df['Age'].describe()
+df['Age'].skew()
+```
+
+4️⃣ Visual Analysis
+
+->Plots continuous variables using histograms and Kernel Density Estimation (KDE) curves.
+
+->Examines distribution spread and detects age ranges across passengers (0.42 to 80 years).
+
+```
+# Age distribution plots
+df['Age'].plot(kind='hist', bins=20)
+df['Age'].plot(kind='kde')
+```
+
+📊 Datasets & Schema
+
+```
+DatasetRecordsDescriptionPrimary KeyKey Featurestrain.csv891Historical passenger manifest and survival recordsPassengerIdSurvived, Pclass, Sex, Age, Fare, Embarkedtest.csv418Historical passenger manifest for testing model predictionsPassengerIdSurvived, Pclass, Sex, Age, Fare, Embarked
+
+
+
+```
+
+
+💡 Key Insights Discovered
+
+->Age Distribution: Passenger age in train.csv follows an approximately normal distribution with a slight right skew (skewness ≈ 0.389) and a median age of 28.0 years (mean of ~29.7 years).
+
+->Missing Values: train.csv exhibits a ~19.8% missing value rate in the Age column, which means handling or imputing missing data will be necessary before building predictive machine learning models.
+
+🚀 How to Run
+
+1. Clone the Repository
+
+```
+git clone https://github.com/DEVYAM07/titanic-data-analysis-eda.git
+cd titanic-data-analysis-eda
+```
+
+2. Install Dependencies
+
+```
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+3. Launch Notebook Pipeline
+
+```
+jupyter notebook notebooks/Titanic_Data_Analysis.ipynb
+```
+
+🧰 Tech Stack
+
+Language: Python 3.8+
+
+Data Manipulation: pandas, numpy
+
+Visualization: matplotlib, seaborn
+
+Thanks for checking out this project! Feel free to star ⭐️ the repository if you found it helpful!
